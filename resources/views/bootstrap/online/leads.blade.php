@@ -24,7 +24,12 @@
                     <td>{{strtolower($lead->plan)}}</td>
                     <td>{{strtolower($lead->message)}}</td>
                     <td>
-                        <a class="btn btn-success" href="leads/edit/{{$lead->id}}"><span class="fa fa-check"></span></button>
+                        <a class="btn btn-success"
+                        href="leads/convert/{{$lead->id}}"
+                        data-bs-toggle="tooltip" data-bs-placement="top"
+                        data-bs-custom-class="custom-tooltip"
+                        data-bs-title="Transformar {{$lead->name}} em cliente.">
+                        <span class="fa fa-check"></span></button>
                         <a class="btn btn-danger" onclick="confirmAndRedirect(event, 'deseja realmente executar esta ação?', 'leads/del/{{$lead->id}}')" href="clientes/del/{{$lead->id}}"><span class="fa fa-trash"></span></button>
                     </td>
                 </tr>
@@ -47,5 +52,7 @@
             return false;
         }
     }
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 </script>
 @endsection

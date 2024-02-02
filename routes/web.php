@@ -51,6 +51,7 @@ Route::middleware('online')->prefix('clientes/')->group(function(){
 });
 Route::middleware('online')->prefix('leads/')->group(function(){
     Route::get('/', [LeadsController::class, 'index']);
+    Route::get('convert/{id}', [LeadsController::class, 'convert'])->name('leads.convert');
 });
 
 // rota somente para realização de testes de execução de funções

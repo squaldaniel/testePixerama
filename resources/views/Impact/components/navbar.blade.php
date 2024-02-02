@@ -7,10 +7,12 @@
       </div>
     @endif
 
-    @if (session('error'))
+    @if (session('error') || $errors->any())
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Error!</strong> Houve um problema no envio do formulário.
-        {{session('error')}}
+        @foreach($errors->getMessages() as $this_error)
+            <p style="color: red;">{{$this_error[0]}}</p>
+        @endforeach
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     @endif

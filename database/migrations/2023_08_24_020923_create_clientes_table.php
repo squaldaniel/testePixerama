@@ -15,14 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('nome', 100);
             $table->string('email', 80);
-            $table->string('cpf', 15);
-            $table->date('nascimento');
+            $table->string('cpf', 15)->nullable();
+            $table->date('nascimento')->nullable();
             $table->string('rua', 200)->nullable();
             $table->string('num_compl', 30)->nullable();
-            $table->string('cep', 9);
+            $table->string('cep', 9)->nullable();
             $table->string('cidade', 50)->nullable();
             $table->string('estado', 2)->nullable();
-            $table->string('sexo', 1);
+            $table->string('sexo', 1)->nullable();
             $table->boolean('ativo')->default(1);
         });
     }

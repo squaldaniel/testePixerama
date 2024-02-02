@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\LeadsRequest;
 use App\Models\LeadsModel;
+use App\Models\ClientesModel;
+use Illuminate\Support\Facades\DB;
 
 class LeadsController extends Controller
 {
@@ -13,21 +15,27 @@ class LeadsController extends Controller
      */
     public function index()
     {
-        $leads = \DB::table('leads')->simplePaginate(7);
-        // LeadsModel::get()->perPage();
+        $leads = DB::table('leads')->simplePaginate(7);
+
         return view('bootstrap.online.leads')->with([
-                'title'=> 'Leads',
-                'leads'=>$leads
+                'title' => 'Leads',
+                'leads' => $leads
                 ]);
-        dd(get_class_methods($leads));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Convert Lead em Client
      */
-    public function create()
+    public function convert($id)
     {
-        //
+        $lead = LeadsModel::find($id);
+        $newClient = new ClientesModel;
+        $newClient->nome = $lead->name;
+        $newClient->email = $lead->email;
+        $newClient->save();
+
+        dd($newClient);
+        return $lead;
     }
 
     /**
@@ -35,8 +43,6 @@ class LeadsController extends Controller
      */
     public function store(LeadsRequest $request)
     {
-        // dd($request->all());
-
         try {
             LeadsModel::create($request->all());
         } catch (\Throwable $th) {
@@ -47,35 +53,4 @@ class LeadsController extends Controller
         return redirect()->back()->with('success', 'Sua mensagem foi enviada com sucesso.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }
