@@ -42,7 +42,7 @@ Route::middleware('online')->prefix('clientes/')->group(function(){
     Route::get('edit/{id}', function($id){
         $request = new App\Http\Controllers\ClientesController;
         return $request->edit($id);
-    });
+    })->name('clientes.edit');
     Route::get('del/{id}', [App\Http\Controllers\ClientesController::class, 'destroy']);
     Route::get('view/{id}', function($id){
         return $id;

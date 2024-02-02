@@ -11,8 +11,8 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <td>Nome Lead</td><td>E-mail</td><td>Assunto</td><td>Plano</td><td>Mensagem</td>
-                <td>Controles</td>
+                <th class="font-weight-bold">Nome Lead</th><th class="font-weight-bold" >E-mail</th><th >Assunto</th><th >Plano</th ><th >Mensagem</th>
+                <th>Controles</th>
             </tr>
         </thead>
         <tbody>

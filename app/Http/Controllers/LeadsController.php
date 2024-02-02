@@ -33,9 +33,8 @@ class LeadsController extends Controller
         $newClient->nome = $lead->name;
         $newClient->email = $lead->email;
         $newClient->save();
-
-        dd($newClient);
-        return $lead;
+        $lead->delete();
+        return redirect()->route('clientes.edit', ['id' => $newClient->id]);
     }
 
     /**
@@ -52,5 +51,10 @@ class LeadsController extends Controller
         }
         return redirect()->back()->with('success', 'Sua mensagem foi enviada com sucesso.');
     }
+
+
+
+
+
 
 }

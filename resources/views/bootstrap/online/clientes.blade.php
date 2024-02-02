@@ -11,7 +11,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <td>Nome</td><td>E-mail</td><td>CPF</td><td>Nasc.</td><td>CEP</td><td>Sexo</td><td>Ações</td>
+                <th>Nome</th><th>E-mail</th><th>CPF</th><th>Nasc.</th><th>CEP</th><th>Sexo</th><th>Ações</th>
             </tr>
         </thead>
         <tbody>
