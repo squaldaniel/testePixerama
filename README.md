@@ -20,3 +20,4 @@ A aplicação é composta de uma landing page inicial falando de um CRM e suas v
 A aplicação possui um painel em <strong>http://127.0.0.1:8000/painel</strong>, onde você entra com o usuário e senha mencionado acima. No painel é possivel listar os clientes semeados, e também os leads capturados. os Leads podem ser convertidos em clientes com apenas um click.
 
 > Obs: a aplicação está integrada com o via CEP, onde pode consultar os ceps dos clientes. Alguns ceps foram gerados pelo semeador então podem não ser válidos.
+também colocamos um pequeno grafico para sabermos a quantidade de homens e mulheres entre os clientes.

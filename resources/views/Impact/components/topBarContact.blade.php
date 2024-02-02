@@ -6,10 +6,7 @@
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+55 (11) 95361-0234 </span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://www.instagram.com/danielshoganmkt/" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
   </section><!-- End Top Bar -->
