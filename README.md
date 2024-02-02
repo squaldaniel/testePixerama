@@ -17,6 +17,6 @@ artisan db:seed
 5 - entre com o Login: <strong>admin@sys.com</strong> e senha: </strong>1234</strong><br/>
 ## Informações sobre a aplicação:
 A aplicação é composta de uma landing page inicial falando de um CRM e suas vantagens, e a mesma captura interessados em adquirir a ferramenta.
-A aplicação possui um painel em <strong>127.0.0.1:8000/painel</strong>, onde você entra com o usuário e senha mencionado acima. No painel é possivel listar os clientes semeados, e também os leads capturados. os Leads podem ser convertidos em clientes com apenas um click.
+A aplicação possui um painel em <strong>http://127.0.0.1:8000/painel</strong>, onde você entra com o usuário e senha mencionado acima. No painel é possivel listar os clientes semeados, e também os leads capturados. os Leads podem ser convertidos em clientes com apenas um click.
 
-> obs a aplicação está integrada com o via CEP, onde pode consultar os ceps dos clientes. Alguns ceps foram gerados pelo semeador então podem não ser válidos.
+> Obs: a aplicação está integrada com o via CEP, onde pode consultar os ceps dos clientes. Alguns ceps foram gerados pelo semeador então podem não ser válidos.
