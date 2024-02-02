@@ -13,7 +13,13 @@ class LeadsController extends Controller
      */
     public function index()
     {
-        //
+        $leads = \DB::table('leads')->simplePaginate(7);
+        // LeadsModel::get()->perPage();
+        return view('bootstrap.online.leads')->with([
+                'title'=> 'Leads',
+                'leads'=>$leads
+                ]);
+        dd(get_class_methods($leads));
     }
 
     /**

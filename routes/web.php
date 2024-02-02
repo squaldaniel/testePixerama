@@ -48,7 +48,9 @@ Route::middleware('online')->prefix('clientes/')->group(function(){
         return $id;
     });
     Route::post('update/{id}', [App\Http\Controllers\ClientesController::class, 'update']);
-
+});
+Route::middleware('online')->prefix('leads/')->group(function(){
+    Route::get('/', [LeadsController::class, 'index']);
 });
 
 // rota somente para realização de testes de execução de funções

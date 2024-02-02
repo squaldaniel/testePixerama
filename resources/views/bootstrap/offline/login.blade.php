@@ -6,7 +6,7 @@
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card border-0 shadow rounded-3 my-5 alert alert-info">
           <div class="card-body p-4 p-sm-5">
-            <img src="/img/Logo-Capital.png" height="50">
+            <img src="/img/logo.png" height="50">
             <h5 class="card-title text-center mb-5 fw-light fs-5">Login</h5>
             <hr class="my-4">
             <form action="/auth" method="POST">
