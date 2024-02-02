@@ -9,7 +9,10 @@ Mysql 8.0 ou MariaDB 10<br/>
 ```
 composer install
 ```
-3 - Proceda normalmente colocando informações de acesso a um banco de dados em seu arquivo <strong>.env</strong><br/>
+3 - Proceda normalmente colocando informações de acesso a um banco de dados em seu arquivo <strong>.env</strong> e rode as migrações <br/>
+```
+php artisan migrate
+```
 4 - execute o comando php <strong>artisan db:seed</strong> para popular as informações iniciais.<br/>
 ```
 artisan db:seed
